@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import "vars";
+@import "libs";
+@import "global";
+
+.header {
+	margin-top: 38px;
+	margin-bottom: 45px;
+
+	&__link-logo {
+		font-weight: 900;
+		font-size: 27px;
+		line-height: 32px;
+		color: #7c7c7d;
+		padding-right: 202px;
+		padding-left: 7px;
+	}
+
+	&__link {
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 18px;
+		color: #7c7c7d;
+		padding-right: 52px;
+	}
+}
+
+.main {
+	margin-bottom: 58px;
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.main-item {
+	&__left {
+		flex: 0 0 40%;
+		padding-right: 50px;
+	}
+
+	&__title {
+		font-weight: normal;
+		font-size: 56px;
+		line-height: 66px;
+	}
+
+	&__subtitle {
+		margin-bottom: 51px;
+	}
+
+	&__link {
+		padding-right: 31px;
+	}
+
+	&__right {
+		height: 550px;
+	}
+
+}
+
+.about {
+	position: relative;
+	text-align: center;
+	background-image: url(/img/02.png);
+	background-repeat: no-repeat;
+	background-position: left top 80px;
+
+	&__title {
+		margin-bottom: 15px;
+	}
+
+	&__subtitle {
+		margin-bottom: 110px;
+		padding: 0 220px;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: center;
+		margin-top: 29px;
+		margin-bottom: 116px;
+	}
+
+	&__item {
+		display: flex;
+		flex: 0 0 30%;
+		text-align: left;
+		box-shadow: 0px 5px 20px rgba(5, 62, 115, 0.15);
+		border-radius: 5px;
+		padding: 25px 35px 25px 20px;
+		margin-left: 31px;
+	}
+
+	&__item-img {
+		width: 116px;
+		height: 108px;
+	}
+
+	&__item-text {
+		padding-left: 15px;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 21px;
+		display: flex;
+		align-items: center;
+		color: #333333;
+	}
+}
+
+/*********** Mechanics **************/
+
+.mechanics {
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		background-image: url(/img/10.png);
+		background-repeat: no-repeat;
+		top: -80px;
+		right: -110px;
+		width: 259px;
+		height: 265px;
+		animation-name: rotation;
+		animation-duration: 7s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+
+	@keyframes rotation {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	&__title {
+		margin-bottom: 62px;
+	}
+
+	&__items {
+		display: flex;
+		margin-bottom: 110px;
+		padding: 0 35px;
+	}
+
+	&__item {
+		color: #7c7c7d;
+		padding-left: 30px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+
+.item {
+	&__img {
+		width: 150px;
+		height: 64px;
+		margin-bottom: 30px;
+		position: relative;
+		padding-left: 5px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			background-image: url(/img/icons/arrow.png);
+			width: 30px;
+			height: 12px;
+			top: 25px;
+			right: 10px;
+		}
+	}
+
+	&__text {
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 22px;
+	}
+}
+
+/****************** Life **********/
+
+.life {
+	&__block {
+		display: flex;
+		margin-bottom: 63px;
+	}
+}
+
+.life {
+	&__block-left {
+		flex: 0 0 50%;
+		text-align: left;
+	}
+
+	&__left-title {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+
+	&__left-subtitle {
+		margin-bottom: 25px;
+	}
+
+	&__title-items {
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 28px;
+		margin-bottom: 30px;
+	}
+
+	&__left-items {
+		display: flex;
+	}
+
+	&__block-right {
+		padding-left: 45px;
+	}
+}
+
+.left {
+	&__item {
+		padding-right: 110px;
+	}
+
+	&__item-img {
+		height: 65px;
+		margin-bottom: 20px;
+	}
+
+	&__item-text {
+		font-size: 15px;
+		line-height: 22px;
+	}
+
+	&__item-text span {
+		font-size: 18px;
+		line-height: 26px;
+	}
+}
+
+/************** developments *************************/
+.developments {
+	&__block {
+		display: flex;
+		margin-bottom: 35px;
+	}
+
+	&__block-right {
+		margin: 10% 0px 0px 18%;
+	}
+
+	&__right-title {
+		margin-bottom: 20px;
+	}
+
+	&__right-subtitle {
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 34px;
+		color: #7c7c7d;
+	}
+}
+
+/************ Friends ***********/
+
+.friends {
+	&__block {
+		display: flex;
+		margin-bottom: 55px;
+	}
+
+	&__block-left {
+		margin: 10% 18% 0px 8%;
+	}
+
+	&__left-title {
+		margin-bottom: 20px;
+	}
+
+	&__left-subtitle {
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 34px;
+		color: #7c7c7d;
+	}
+}
+
+/******* reviews ********/
+
+.reviews-title {
+	margin-bottom: 45px;
+}
+
+.reviews-slaider {
+	position: relative;
+	margin-bottom: 120px;
+
+	&__item {
+		max-width: 368px;
+		max-height: 280px;
+		text-align: left;
+		padding: 30px 23px 74px 35px;
+		box-shadow: 0px 5px 5px rgba(5, 62, 115, 0.1);
+		border-radius: 5px;
+		margin-bottom: 60px;
+	}
+
+	&__box {
+		display: flex;
+		margin-bottom: 22px;
+	}
+
+	&__right {
+		padding-left: 30px;
+	}
+
+	&__title {
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 28px;
+		color: #161513;
+		margin: 10px auto;
+	}
+
+	&__subtitle {
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 22px;
+		color: #161513;
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 22px;
+		color: #7c7c7d;
+	}
+}
+
+.reviews-slaider .slick-arrow {
+	position: absolute;
+	top: 40%;
+	margin: 0px -20px;
+	z-index: 10;
+	font-size: 0;
+	height: 77.94px;
+	width: 20px;
+}
+
+.reviews-slaider .slick-arrow.slick-prev {
+	left: 0;
+	background: url("../img/icons/prev-arrow.png") 0 0 / 100% no-repeat;
+}
+
+.reviews-slaider .slick-arrow.slick-next {
+	right: 0;
+	background: url("../img/icons/next-arrow.png") 0 0 / 100% no-repeat;
+}
+
+/* Точки (булиты) */
+.reviews-slaider .slick-dots {
+	position: absolute;
+	z-index: 10;
+	display: flex;
+	left: 48%;
+}
+
+.reviews-slaider .slick-dots li {
+	list-style: none;
+	margin: 0px 10px 0px 0px;
+}
+
+/* Элемент точки */
+.reviews-slaider .slick-dots li button {
+	font-size: 0;
+	width: 40px;
+	height: 10px;
+	background-color: #c9c9c9;
+	border-radius: 9px;
+}
+
+.reviews-slaider .slick-dots li.slick-active button {
+	background-color: #62bb2b;
+	border-radius: 9px;
+}
+
+/****** Download ******/
+.download {
+	&__items {
+		display: flex;
+	}
+}
+
+.download-item {
+	&__left {
+		flex: 35% 0 0;
+	}
+
+	&__title {
+		text-align: left;
+		margin-bottom: 30px;
+	}
+
+	&__subtitle {
+		text-align: left;
+		margin-bottom: 40px;
+	}
+
+	&__link {
+		margin-right: 30px;
+	}
+
+	&__right {
+		padding-left: 15%;
+	}
+}
+
+/********* Footer ******/
+
+.footer {
+	background: #161513;
+
+	&__items {
+		display: flex;
+		color: white;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 22px;
+	}
+}
+
+.footer-item {
+	flex: 25% 0 0;
+	padding: 64px 120px 100px 0px;
+
+	&__title {
+		font-weight: 900;
+		font-size: 27px;
+		line-height: 29px;
+	}
+
+	&__subtitle {
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	&__link {
+		color: white;
+	}
+
+	&__text {
+		margin-bottom: 16px;
+	}
+
+	&__img {
+		width: 41.79px;
+		height: 42.59px;
+		padding-right: 20px;
+	}
+}
