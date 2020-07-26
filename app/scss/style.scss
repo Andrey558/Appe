@@ -25,8 +25,9 @@
 		padding-right: 52px;
 	}
 }
-@media(max-width: 1024px){
-	.header{
+
+@media(max-width: 1024px) {
+	.header {
 		&__link-logo {
 			padding-right: 120px;
 		}
@@ -38,14 +39,13 @@
 
 	&__items {
 		display: flex;
-		justify-content: space-between;
 	}
 }
 
 .main-item {
 	&__left {
 		flex: 0 0 40%;
-		padding-right: 50px;
+		padding-right: 3%;
 	}
 
 	&__title {
@@ -63,11 +63,48 @@
 	}
 
 	&__right {
-		height: 550px;
+		padding-left: 10%;
+	}
+
+}
+
+@media(max-width: 1024px) {
+	.main {
+		margin-bottom: 40px;
+	}
+
+	.main-item {
+		&__left {
+			flex: 0 0 50%;
+			padding-right: 0px;
+		}
+
+		&__title {
+			font-weight: normal;
+			font-size: 46px;
+			line-height: 50px;
+		}
+
+		&__subtitle {
+			margin-bottom: 30px;
+		}
+
+		&__link {
+			padding-right: 5px;
+		}
+
+		&__right {
+			padding-left: 2%;
+		}
+
+		&__img {
+			max-width: 450px;
+
+		}
 	}
 }
 
-
+/********************************************/
 
 .about {
 	position: relative;
@@ -118,8 +155,35 @@
 	}
 }
 
-/*********** Mechanics **************/
+@media(max-width: 1024px) {
+	.about {
+		background-position: left top 100px;
 
+		&__subtitle {
+			margin-bottom: 110px;
+			padding: 0 100px;
+		}
+
+		&__items {
+			margin-bottom: 100px;
+		}
+
+		&__item {
+			margin-left: 21px;
+		}
+
+		&__item-img {
+			width: 90px;
+			height: 88px;
+		}
+
+		&__item-text {
+			padding-left: 5px;
+		}
+	}
+}
+
+/*********** Mechanics **************/
 .mechanics {
 	position: relative;
 
@@ -157,18 +221,16 @@
 		margin-bottom: 110px;
 		padding: 0 35px;
 	}
-
-	&__item {
-		color: #7c7c7d;
-		padding-left: 30px;
-
-		&:first-child {
-			padding-left: 0;
-		}
-	}
 }
 
-.item {
+.mechanics-item {
+	color: #7c7c7d;
+	padding-left: 30px;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
 	&__img {
 		width: 150px;
 		height: 64px;
@@ -194,6 +256,29 @@
 	}
 }
 
+@media(max-width: 1024px) {
+	.mechanics {
+		&::before {
+			content: "";
+			top: -120px;
+			right: -130px;
+		}
+
+		&__title {
+			margin-bottom: 80px;
+		}
+
+		&__items {
+			margin-bottom: 110px;
+			padding: 0 0px;
+		}
+	}
+
+	.mechanics-item {
+		padding-left: 10px;
+	}
+}
+
 /****************** Life **********/
 
 .life {
@@ -201,9 +286,7 @@
 		display: flex;
 		margin-bottom: 63px;
 	}
-}
 
-.life {
 	&__block-left {
 		flex: 0 0 50%;
 		text-align: left;
@@ -255,6 +338,25 @@
 	}
 }
 
+@media(max-width: 1024px) {
+	.life {
+		&__left-title {
+			margin-bottom: 15px;
+		}
+
+		&__block-right {
+			padding-left: 0px;
+		}
+	}
+
+	.left {
+		&__item {
+			padding-right: 10%;
+		}
+	}
+}
+
+
 /************** developments *************************/
 .developments {
 	&__block {
@@ -278,6 +380,15 @@
 	}
 }
 
+@media(max-width: 1024px) {
+	.developments {
+		&__block-right {
+			margin: 10% 0px 0px 10%;
+		}
+	}
+}
+
+
 /************ Friends ***********/
 
 .friends {
@@ -292,6 +403,7 @@
 
 	&__left-title {
 		margin-bottom: 20px;
+		text-align: left;
 	}
 
 	&__left-subtitle {
@@ -299,6 +411,14 @@
 		font-size: 24px;
 		line-height: 34px;
 		color: #7c7c7d;
+	}
+}
+
+@media(max-width: 1024px) {
+	.friends {
+		&__block-left {
+			margin: 10% 5% 0px 8%;
+		}
 	}
 }
 
@@ -380,7 +500,7 @@
 	position: absolute;
 	z-index: 10;
 	display: flex;
-	left: 48%;
+	left: 40%;
 }
 
 
@@ -403,7 +523,14 @@
 	border-radius: 9px;
 }
 
-/****** Download ******/
+@media(max-width: 1024px) {
+	.reviews-slaider {
+		width: 90%;
+		margin: 0 auto 100px auto;
+	}
+}
+
+/**************** Download *****************/
 .download {
 	&__items {
 		display: flex;
@@ -431,6 +558,22 @@
 
 	&__right {
 		padding-left: 15%;
+	}
+}
+
+@media(max-width: 1024px) {
+	.download-item {
+		&__left {
+			flex: 45% 0 0;
+		}
+
+		&__right {
+			padding-left: 0%;
+		}
+
+		&__img {
+			width: 98%;
+		}
 	}
 }
 
@@ -476,5 +619,12 @@
 		width: 41.79px;
 		height: 42.59px;
 		padding-right: 20px;
+	}
+}
+
+@media(max-width: 1024px) {
+	.footer-item {
+		flex: 25% 0 0;
+		padding: 34px 30px 60px 0px;
 	}
 }
